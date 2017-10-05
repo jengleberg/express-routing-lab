@@ -14,7 +14,7 @@ var candies = [
 	//in order to pass our first test??
 	// What would go here? 
 	// Hint: we want all candies in JSON format
-router.get('/:', function(req,res) {
+router.get('/', function(req,res) {
 	console.log("These are my candies");
 	res.json(candies);
 });
@@ -22,7 +22,7 @@ router.get('/:', function(req,res) {
 // Fill out the rest of the routes here
 
 // Show
-router.get('/:id:', function(req, res) {
+router.get('/:id', function(req, res) {
 	var candyID = req.params.id;
 	res.json(candies[candyID -1]);
 });
@@ -57,5 +57,7 @@ router.delete('/:id', function(req, res) {
 	}
 	console.log("candy deleted");
 });
+
+
 
 module.exports = router;
